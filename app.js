@@ -6,13 +6,17 @@
 
 Boolean переменную успеете ли вы взяться за работу
 Сколько вы за неё попросите? */
-let salary = 80;
-let daysToMove = 11;
-let weekends = 2;
+
+//данные
+const salary = 80;
+const daysToMove = 11;
+const weekends = 2;
 let workDays = daysToMove - weekends;
-let edHours = 5;
-let orderHours = 40;
+const edHours = 5;
+const orderHours = 40;
 let orderDays = orderHours/edHours;
-let finalSalary = (orderDays*edHours)*80;
+let finalSalary = orderHours*80;
+
+//результат
 console.log(orderDays<workDays);
 console.log(finalSalary);
