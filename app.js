@@ -1,22 +1,25 @@
-/* Ваша часовая ставка 80$ и вы готовы работать не более 5 часов в день 5 дней в неделю (кроме выходных).
+ /* Вася положил 12 000 на вклад 7% годовых
+ с капитализацией 1 раз в месяц.
+ Вывести в консоль, сможет ли он купить дом
+ за 13 500 через 2 года после снятия вклада.
+ И остаток после покупки.
 
-К вам приходит заказчик и предлагает заказ на 40 часов работы. Сейчас понедельник. Вы должны уехать через 11 дней.
-
-Выведете в консоль:
-
-Boolean переменную успеете ли вы взяться за работу
-Сколько вы за неё попросите? */
+Итог = Сумма * (1 + Ставка в месяц не в %) ** срок в месяцах */
 
 //данные
-const salary = 80;
-const daysToMove = 11;
-const weekends = 2;
-let workDays = daysToMove - weekends;
-const edHours = 5;
-const orderHours = 40;
-let orderDays = orderHours/edHours;
-let finalSalary = orderHours*80;
+let depo = 12000;
+let cost = 13500;
+let term = 24;
+let incomeMonth = 0.07/12;
+let income = depo * (1 + incomeMonth) ** 24;
 
 //результат
-console.log(orderDays<workDays);
-console.log(finalSalary);
+if (income>cost) {
+    console.log(`You earned: ${income}
+You can buy house
+Your Residual balance: ${income - cost}`)
+} else {
+    console.log(`Can not buy house
+You earned: ${income}`)
+}
+
