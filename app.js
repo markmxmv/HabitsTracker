@@ -1,11 +1,21 @@
-/*Методом prompt получите ответ пользователя на вопрос "Сколько будет 7 + или - 15?".
-Если ответ верен, выведите в консоли "Успех", если нет - "Вы робот!",
-а если он введёт "Я не робот", то тоже "Успех". */
+/*Пользователь хочет приобрести игру в магазине. Он может это сделать только если:
 
-const answer = prompt("Сколько будет 7 + или - 15?");
+Eго баланс больше 1000 (balance) или число бонусов больше 100 (bonusBalance)
+Он не забанен (isBanned)
+Игра не куплена (isExist)
+Игра в продаже (isSelling)
+Напишите условие для покупки и выведите в консоль результат.*/
 
-if (Number(answer) === 22 || Number(answer) === -8 || answer === 'Я не робот') {
-    console.log("Успех!");
+const balance = 900;
+const bonusBalance = 20;
+const isBanned = false;
+const isExist = false;
+const isSelling = true;
+
+const canBuy = (balance>1000 || bonusBalance>100) && !isBanned && !isExist && isSelling;
+
+if (canBuy) {
+    console.log("Congrats!");
 } else {
-    console.log("Вы робот!");
+    console.log("You can't buy this item");
 }
