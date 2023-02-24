@@ -1,22 +1,16 @@
-const secretNumber = Number(prompt('Введите число:'));
-if (secretNumber===7) {
-    console.log('Good');
+/*Методом prompt получите ответ пользователя на вопрос "Сколько будет 7 + или - 15?".
+Если ответ верен, выведите в консоли "Успех", если нет - "Вы робот!",
+а если он введёт "Я не робот", то тоже "Успех". */
 
-} else {
-    console.log('Bad');
-}
+const answer = prompt("Сколько будет 7 + или - 15?");
 
-const role = prompt("Write your role:")
-switch (role) {
-    case "admin":
-        console.log("Admin");
-        break; 
-    case "manager":
-        console.log("Manager");
-        break;
-    case "ceo":
-        console.log("CEO");
+switch (true) {
+    case Number(answer) === 22:
+    case Number(answer) === -8:
+    case answer === "Я не робот":
+        console.log("Успех!");
         break;
     default:
-        console.log("We don't know you!")
+        console.log("Вы робот!")
+        break;
 }
