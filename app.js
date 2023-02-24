@@ -4,13 +4,8 @@
 
 const answer = prompt("Сколько будет 7 + или - 15?");
 
-switch (true) {
-    case Number(answer) === 22:
-    case Number(answer) === -8:
-    case answer === "Я не робот":
-        console.log("Успех!");
-        break;
-    default:
-        console.log("Вы робот!")
-        break;
+if (Number(answer) === 22 || Number(answer) === -8 || answer === 'Я не робот') {
+    console.log("Успех!");
+} else {
+    console.log("Вы робот!");
 }
