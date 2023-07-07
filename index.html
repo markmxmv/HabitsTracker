@@ -15,26 +15,19 @@
       <div class="panel">
         <img class="logo" src="/images/logo.svg" alt="logo of Habits Tracker">
         <nav class="menu">
-          <div class="menu__list">
-            <button class="menu__item menu__item_active">
-              <img src="images/water.svg" alt="water">
-            </button>
-            <button class="menu__item">
-              <img src="images/food.svg" alt="food">
-            </button>
-          </div>
-          <button class="menu__add">
+          <div class="menu__list"></div>
+          <button class="menu__add" onclick="togglePopup(this)">
             <img class="addButton" src="images/add.svg" alt="add buton">
           </button>
         </nav>
       </div>
       <div class="content">
         <header>
-          <h1>Отжимания</h1>
+          <h1 class="h1">-</h1>
           <div class="progress">
             <div class="progress__text">
               <div class="progress__name">Прогресс</div>
-              <div class="progress__percent">80%</div>
+              <div class="progress__percent">%</div>
             </div>
             <div class="progress__bar">
               <div class="progress__cover_bar"></div>
@@ -43,25 +36,44 @@
           </div>
         </header>
         <main>
-          <div>
-            <div class="habit">
-              <div class="habit__day">День 1</div>
-              <div class="habit__comment">Первый подход всегда даётся тяжело</div>
-              <button class="habit__delete">
-                <img src="images/delete.svg" alt="Delete">
-              </button>
-            </div>
+          <div class="days">
           </div>
           <div class="habit">
-            <div class="habit__day">День 2</div>
-            <form class="habit__form">
-              <input class="input_icon" type="text" placeholder="Комментарий">
+            <div class="habit__day addingDay">-</div>
+            <form class="habit__form" onsubmit="addDays(event)">
+              <input name="comment" class="input_icon" type="text" placeholder="Комментарий">
               <img class="input__icon" src="images/comment.svg" alt="comment icon">
               <button class="done">Готово</button>            
             </form>
 
           </div>
         </main>
+      </div>
+      <div class="cover cover_hidden">
+        <div class="popup">
+          <h2>Новая привычка</h2>
+          <div class="icon-label">Иконка</div>
+          <div class="icon-select">
+            <button class="icon icon-active" onclick="setIcon(this, 'sport')">
+              <img src="images/sport.svg" alt="Спорт">
+            </button>
+            <button class="icon" onclick="setIcon(this, 'water')">
+              <img src="images/water.svg" alt="Вода">
+            </button>
+            <button class="icon" onclick="setIcon(this, 'food')">
+              <img src="images/food.svg" alt="Еда">
+            </button>
+          </div>
+          <form class="popup__form" onsubmit="addHabit(event)">
+            <input type="text" name="name" class="name" placeholder="Название">
+            <input type="text" name="icon" hidden placeholder="Иконка" value="sport">
+            <input type="text" name="target" class="target" placeholder="Цель (введите количество дней)">
+            <button class="done" type="submit">Добавить</button>
+          </form>
+          <button class="popup__close" onclick="togglePopup(this)">
+            <img class="close" src="images/close.svg" alt="Закрыть попап">
+          </button>
+        </div>
       </div>
     </div>
     <script src="./scripts/app.js"></script>
