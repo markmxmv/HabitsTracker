@@ -8,16 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
     <div class="app">
       <div class="panel">
-        <img class="logo" src="/images/logo.svg" alt="logo of Habits Tracker">
+        <img class="logo" src="./images/logo.svg" alt="logo of Habits Tracker">
         <nav class="menu">
           <div class="menu__list"></div>
           <button class="menu__add" onclick="togglePopup(this)">
-            <img class="addButton" src="images/add.svg" alt="add buton">
+            <img class="addButton" src="./images/add.svg" alt="add buton">
           </button>
         </nav>
       </div>
@@ -42,7 +42,7 @@
             <div class="habit__day addingDay">-</div>
             <form class="habit__form" onsubmit="addDays(event)">
               <input name="comment" class="input_icon" type="text" placeholder="Комментарий">
-              <img class="input__icon" src="images/comment.svg" alt="comment icon">
+              <img class="input__icon" src="./images/comment.svg" alt="comment icon">
               <button class="done">Готово</button>            
             </form>
 
@@ -55,13 +55,13 @@
           <div class="icon-label">Иконка</div>
           <div class="icon-select">
             <button class="icon icon-active" onclick="setIcon(this, 'sport')">
-              <img src="images/sport.svg" alt="Спорт">
+              <img src="./images/sport.svg" alt="Спорт">
             </button>
             <button class="icon" onclick="setIcon(this, 'water')">
-              <img src="images/water.svg" alt="Вода">
+              <img src="./images/water.svg" alt="Вода">
             </button>
             <button class="icon" onclick="setIcon(this, 'food')">
-              <img src="images/food.svg" alt="Еда">
+              <img src="./images/food.svg" alt="Еда">
             </button>
           </div>
           <form class="popup__form" onsubmit="addHabit(event)">
@@ -71,7 +71,7 @@
             <button class="done" type="submit">Добавить</button>
           </form>
           <button class="popup__close" onclick="togglePopup(this)">
-            <img class="close" src="images/close.svg" alt="Закрыть попап">
+            <img class="close" src="./images/close.svg" alt="Закрыть попап">
           </button>
         </div>
       </div>
