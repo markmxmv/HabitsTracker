@@ -80,7 +80,7 @@ function rerenderBody(activeHabit) {
             const dayElement = document.createElement('div');
             dayElement.classList.add('habit');
             dayElement.innerHTML =
-            `<div class="habit__day"">День ${i+1}</div>
+            `<div class="habit__day"">Day ${i+1}</div>
             <div class="habit__comment">${activeHabit.days[i].comment}</div>
             <button class="habit__delete" onclick="deleteDays(${i})">
             <img src="images/delete.svg"}"alt="Delete">
@@ -89,7 +89,7 @@ function rerenderBody(activeHabit) {
             
             page.body.days.appendChild(dayElement)
     }
-    document.querySelector('.addingDay').innerText = `День ${activeHabit.days.length + 1}`
+    document.querySelector('.addingDay').innerText = `Day ${activeHabit.days.length + 1}`
 }
 
 /* work with days */
